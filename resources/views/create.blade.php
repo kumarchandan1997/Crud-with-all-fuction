@@ -94,3 +94,113 @@
     
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+{{-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Submission with jQuery AJAX</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <form id="userForm" enctype="multipart/form-data">
+      @csrf
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="mobile">Mobile</label>
+          <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Mobile">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="country">Country</label>
+          <input type="text" name="country" id="country" class="form-control" placeholder="Country">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="state">State</label>
+          <input type="text" name="state" id="state" class="form-control" placeholder="State">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="dob">DOB</label>
+          <input type="date" name="dob" id="dob" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="image">Image</label>
+          <input type="file" name="image" id="image" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" class="form-control" placeholder="Address">
+      </div>
+      <div class="form-group col-md-12">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+      </div>
+    </form>
+    <div id="validation-errors"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
+
+
+
+
+<script>
+  $(document).ready(function() {
+    $('#userForm').on('submit', function(event) {
+      event.preventDefault();
+  
+      var formData = new FormData(this);
+  
+      $.ajax({
+        url: '/your-server-endpoint', // Change this URL to your server endpoint
+        type: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function(response) {
+          if (response.success) {
+            alert('Form submitted successfully');
+            $('#userForm')[0].reset(); // Reset the form on success
+            $('#validation-errors').html('');
+          }
+        },
+        error: function(xhr) {
+          if (xhr.status === 422) {
+            var errors = xhr.responseJSON.errors;
+            var errorHtml = '<div class="alert alert-danger"><ul>';
+            $.each(errors, function(key, value) {
+              errorHtml += '<li>' + value[0] + '</li>';
+            });
+            errorHtml += '</ul></div>';
+            $('#validation-errors').html(errorHtml);
+          }
+        }
+      });
+    });
+  });
+  </script> --}}
+  
